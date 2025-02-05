@@ -1,5 +1,5 @@
 LETTER = 'A'
-RANGE = 60
+RANGE = 30
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
 
 
     for i in range(RANGE):
-        current_letter, letter_i, bool_add_root = increment_letter(sequence[-1], letter_i)
+        current_letter, bool_add_root = increment_letter(sequence[-1])
 
         if skip == 0:
             root += '#'
@@ -21,24 +21,25 @@ def main():
             skip = 1
 
         if bool_add_root:
+            current_letter = 'A'
             skip -= 1
+        
+        sequence = root + current_letter
 
-        print(root + current_letter)
+        print(sequence)
 
 
-def increment_letter(letter, i):
-    current_letter = chr(ord(letter) + i)
-    letter_i = i + 1
+def increment_letter(letter):
+    current_letter = chr(ord(letter) + 1)
 
     if current_letter == 'Z':
-        letter_i = 0
 
         bool_add_root = True
         
     else:
         bool_add_root = None
 
-    return current_letter, letter_i, bool_add_root
+    return current_letter, bool_add_root
 
 
 if __name__ == "__main__":
