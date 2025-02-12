@@ -1,13 +1,17 @@
-### Program to increment a sequence of letters
+### Program to increment a sequence of letters,
+### Returns list of incremented letter sequences
 
 from letter_increment import LetterIncrement
 
 INPUT_SEQUENCE = 'A'
-RANGE = 1500
+RANGE = 15
+
 
 def main():
     letter_increment = LetterIncrement()
-    letter_increment.increment_letter(INPUT_SEQUENCE, RANGE)
+    sequences = letter_increment.increment_sequence(INPUT_SEQUENCE, RANGE)
+    print(sequences)
+
 
 if __name__ == "__main__":
     main()
