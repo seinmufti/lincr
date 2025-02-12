@@ -8,7 +8,8 @@ class LetterIncrement():
             beginning_letter = 'a'
             ending_letter = 'z'
         else:
-            raise ValueError("""Sequence fails to contain same case.\nPlease provide either a sequence of complete uppercases or a sequence of complete lowercases.""")
+            raise ValueError("""Sequence fails to contain same case.\n
+                             Please provide either a sequence of complete uppercases or a sequence of complete lowercases.""")
 
         # Assign letters sequence
         sequence = input_sequence 
