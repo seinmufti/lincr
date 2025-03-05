@@ -1,18 +1,21 @@
+BEGINNING_LETTER = 'A'
+ENDING_LETTER = 'Z'
+
 class LetterIncrement():
     def increment_sequence(self, input_sequence, incrementation_range):
         # Assign beginning and ending letter
         if input_sequence.isupper():
-            beginning_letter = 'A'
-            ending_letter = 'Z'
+            beginning_letter = BEGINNING_LETTER
+            ending_letter = ENDING_LETTER
         elif input_sequence.islower():
-            beginning_letter = 'a'
-            ending_letter = 'z'
+            beginning_letter = BEGINNING_LETTER.lower()
+            ending_letter = ENDING_LETTER.lower()
         else:
             raise ValueError("""Sequence fails to contain same case.\n
                              Please provide either a sequence of complete uppercases or a sequence of complete lowercases.""")
 
         # Assign letters sequence
-        sequence = input_sequence 
+        sequence = input_sequence
         # Convert sequence into list
         sequence_list = list(sequence)
         # Assign sequence len
