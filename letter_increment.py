@@ -2,7 +2,11 @@ BEGINNING_LETTER = 'A'
 ENDING_LETTER = 'Z'
 
 class LetterIncrement():
-    def increment_sequence(self, input_sequence, incrementation_range):
+    def increment_sequence(self, input_sequence:str, incrementation_range=1) -> list:
+        """
+        Increments a sequence of letters.\n
+        returns a list of incremented letter sequences according to range provided
+        """
         # Assign beginning and ending letter
         if input_sequence.isupper():
             beginning_letter = BEGINNING_LETTER
@@ -23,9 +27,6 @@ class LetterIncrement():
 
         # Assign sequences to list
         sequences = []
-        
-        # Print first sequence
-        sequences.append(sequence)
 
         # increment sequence according to range provided
         for _ in range(incrementation_range): 

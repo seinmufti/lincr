@@ -9,7 +9,7 @@ RANGE = 15
 
 def main():
     letter_increment = LetterIncrement()
-    sequences = letter_increment.increment_sequence(INPUT_SEQUENCE, RANGE)
+    sequences = letter_increment.increment_sequence(INPUT_SEQUENCE)
     print(sequences)
 
 
