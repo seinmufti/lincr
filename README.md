@@ -29,4 +29,3 @@ result = incrementer.increment_sequence('abc', 1)  # Returns ['abd']
 - Can increment multiple times in one call
 - Automatically handles carrying over (Z → AA)
 - Maintains case consistency (raises error if mixed case)
-```
